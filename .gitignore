@@ -6,12 +6,14 @@
 /build/
 /debug/
 /obj/
+/Ghidra_Project.rep
 
 # Object files and static/shared libraries
 *.o
 *.a
 *.so
 *.dylib
+*.gpr
 
 # Executables
 *.exe
