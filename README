@@ -1,0 +1,32 @@
+C 编译器优化对比分析项目 (GCC)
+本项目旨在通过对比 GCC 编译器的不同优化等级（-O0, -O1, -O2, -O3）生成的汇编代码，来深入理解编译器的工作原理和优化策略。
+🚀 项目结构
+.
+├── .vscode/          # VS Code 配置文件，包含构建和调试任务
+├── build/            # ❌ 编译输出目录（被 .gitignore 忽略）
+├── include/          # 头文件目录
+├── src/              # C 源代码目录
+├── Makefile          # GNU Make 构建脚本
+└── README.md         # 项目说明
+
+
+🛠️ 构建要求
+编译器: GCC (MinGW 或其他 Linux/macOS 环境)
+构建工具: GNU Make (在 Windows 上通常是 mingw32-make)
+编辑器: Visual Studio Code
+⚙️ 使用说明 (VS Code 集成)
+本项目已配置 VS Code 的 tasks.json 文件，方便通过快捷键运行不同优化等级的构建任务。
+打开项目: 在 VS Code 中打开本项目文件夹。
+启动构建: 按下 Ctrl + Shift + B (Windows/Linux) 或 Cmd + Shift + B (macOS)。
+选择任务: 屏幕上方会弹出构建任务列表，请选择你想要对比的优化等级：
+Build: O0 (无优化)：生成最接近 C 源代码的汇编。
+Build: O1 (基本优化)
+Build: O2 (中级优化)
+Build: O3 (激进优化)
+查看结果: 构建完成后，所有生成的汇编文件（.s）和可执行文件（.exe）将分类存放在 build/ 目录下：
+汇编文件: build/asm/O[X]/optimization_example.s
+可执行文件: build/debug/O[X]/optimization_example.exe
+🔎 调试和汇编分析
+你可以直接在 VS Code 中调试任一优化等级的代码，并通过 “打开反汇编视图” 来观察运行时汇编代码：
+打开 src/optimization_example.c 并设置一个断点。
+打开 .vscode/launch.json 文件。

@@ -1,0 +1,42 @@
+# ----------------------------------------------------------------------
+# Build Artifacts, Object Files, and Binaries
+# ----------------------------------------------------------------------
+
+# Directories created by the Makefile/build system
+/build/
+/debug/
+/obj/
+
+# Object files and static/shared libraries
+*.o
+*.a
+*.so
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Generated assembly files
+*.s
+
+# ----------------------------------------------------------------------
+# VS Code / IDE Files
+# ----------------------------------------------------------------------
+
+# Local workspace settings (often user-specific)
+.vscode/settings.json
+
+# Compilation Database (often very large)
+BROWSE.VC.DB
+*.vscode/browse.vc.db
+*.vc.db
+
+# VS Code temporary/user files
+/.vscode/
+!/.vscode/c_cpp_properties.json  # Keep project config
+!/.vscode/launch.json            # Keep launch configuration
+!/.vscode/tasks.json             # Keep build tasks
+.history/
+.pylint.d/
